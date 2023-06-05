@@ -1,6 +1,9 @@
 # hotel-reservation-problem
 
-This template should help get you started developing with Vue 3 in Vite.
+## Explicación del diseño
+Para el diseño de esta solución se realizó el uso de componentes. El componente principal es el que corresponde HotelCard.vue. En este se encuentra desarrollado el script que muestra los hoteles por filtro.
+Inicialmente se muestran todos los hoteles, una vez que el usuario ha agregado una fecha dando clic en el botón de + se empezará a renderizar el nuevo dom con el hotel más barato, mientras siga agregando más fechas, este dom se irá actualizando con el nuevo hotel más barato.
+Para calcular el hotel más barato, se busca en el archivo dataHotel.js por cada hotel los días correspondientes a cada fecha ingresada, por cada hotel se guardan las fechas seleccionadas y con estas se calcula el precio total por el total de días en cada hotel, con este valor se realiza una comparación para encontrar el menor valor y con ese valor retornar la vista del hotel al que pertenece. 
 
 ## Recommended IDE Setup
 
@@ -66,4 +69,3 @@ npm run test:e2e
 ```sh
 npm run lint
 ```
-# hotel-reservation-problem
